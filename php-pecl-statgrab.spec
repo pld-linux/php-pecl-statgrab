@@ -30,7 +30,7 @@ systems.
 This extension allows you to call the functions made available by
 libstatgrab library. 
 
-This extension has in PEAR status: %{_status}.
+In PECL status of this package is: %{_status}.
 
 %description -l pl
 libstatgrab to biblioteka dostarczaj±ca wspólny interfejs do
@@ -40,7 +40,7 @@ uniksowych.
 To rozszerzenie pozwala wywo³ywaæ funkcje udostêpniane przez
 bibliotekê libstatgrab.
 
-To rozszerzenie ma w PEAR status: %{_status}.
+To rozszerzenie ma w PECL status: %{_status}.
 
 %prep
 %setup -q -c
