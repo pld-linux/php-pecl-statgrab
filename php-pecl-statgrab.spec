@@ -5,12 +5,12 @@
 Summary:	%{_modname} - libstatgrab bindings
 Summary(pl):	%{_modname} - dowi±zania biblioteki libstatgrab
 Name:		php-pecl-%{_modname}
-Version:	0.2
+Version:	0.3
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	34a40821c630083dc1c2454ca9634592
+# Source0-md5:	c2dd8a7f74de55ef273f96fc9e271512
 URL:		http://pecl.php.net/package/statgrab/
 BuildRequires:	libtool
 BuildRequires:	php-devel
