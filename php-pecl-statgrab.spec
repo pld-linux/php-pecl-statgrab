@@ -22,15 +22,22 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		extensionsdir	%{_libdir}/php
 
 %description
-libstatgrab is a library that provides a common interface for retrieving a
-variety of system statistics on a number of *NIX like systems.
+libstatgrab is a library that provides a common interface for
+retrieving a variety of system statistics on a number of *NIX like
+systems.
 
-This extension allows you to call the functions made available by libstatgrab
-library. 
+This extension allows you to call the functions made available by
+libstatgrab library. 
 
 This extension has in PEAR status: %{_status}.
 
 %description -l pl
+libstatgrab to biblioteka dostarczaj±ca wspólny interfejs do
+odczytywania ró¿nych statystyk systemowych na wielu systemach
+uniksowych.
+
+To rozszerzenie pozwala wywo³ywaæ funkcje udostêpniane przez
+bibliotekê libstatgrab.
 
 To rozszerzenie ma w PEAR status: %{_status}.
 
