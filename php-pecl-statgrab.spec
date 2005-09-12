@@ -12,8 +12,8 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	37df73c8982d03312294e133846d23c5
 URL:		http://pecl.php.net/package/statgrab/
-BuildRequires:	libtool
 BuildRequires:	libstatgrab-devel >= 0.10
+BuildRequires:	libtool
 BuildRequires:	php-devel
 Requires:	php-common
 Obsoletes:	php-pear-%{_modname}
@@ -28,7 +28,7 @@ retrieving a variety of system statistics on a number of *NIX like
 systems.
 
 This extension allows you to call the functions made available by
-libstatgrab library. 
+libstatgrab library.
 
 In PECL status of this package is: %{_status}.
 
