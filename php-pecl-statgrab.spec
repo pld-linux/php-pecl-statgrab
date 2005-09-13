@@ -13,7 +13,6 @@ Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	37df73c8982d03312294e133846d23c5
 URL:		http://pecl.php.net/package/statgrab/
 BuildRequires:	libstatgrab-devel >= 0.10
-BuildRequires:	libtool
 BuildRequires:	php-devel
 Requires:	php-common
 Obsoletes:	php-pear-%{_modname}
