@@ -7,7 +7,7 @@ Summary:	%{_modname} - libstatgrab bindings
 Summary(pl):	%{_modname} - dowi±zania biblioteki libstatgrab
 Name:		php-pecl-%{_modname}
 Version:	0.4
-Release:	4
+Release:	5
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
