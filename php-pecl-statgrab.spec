@@ -1,17 +1,18 @@
 %define		_modname	statgrab
 %define		_smodname	Statgrab
-%define		_status		beta
+%define		_status		stable
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
+
 Summary:	%{_modname} - libstatgrab bindings
 Summary(pl):	%{_modname} - dowi±zania biblioteki libstatgrab
 Name:		php-pecl-%{_modname}
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	8a37780ddf8a992b9c7c1ff94cb874ad
+# Source0-md5:	5e8e659e28d95da57c3d5a694cfb5af4
 URL:		http://pecl.php.net/package/statgrab/
 BuildRequires:	libstatgrab-devel >= 0.10
 BuildRequires:	php-devel >= 3:5.0.0
