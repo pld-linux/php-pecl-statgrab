@@ -2,7 +2,7 @@
 %define		_smodname	Statgrab
 %define		_status		stable
 Summary:	%{_modname} - libstatgrab bindings
-Summary(pl.UTF-8):   %{_modname} - dowiązania biblioteki libstatgrab
+Summary(pl.UTF-8):	%{_modname} - dowiązania biblioteki libstatgrab
 Name:		php-pecl-%{_modname}
 Version:	0.6.0
 Release:	2
