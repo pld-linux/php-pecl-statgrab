@@ -1,22 +1,22 @@
-%define		_modname	statgrab
-%define		_smodname	Statgrab
-%define		_status		stable
-Summary:	%{_modname} - libstatgrab bindings
-Summary(pl.UTF-8):	%{_modname} - dowiązania biblioteki libstatgrab
-Name:		php-pecl-%{_modname}
+%define		php_name	php%{?php_suffix}
+%define		modname	statgrab
+%define		status		stable
+Summary:	%{modname} - libstatgrab bindings
+Summary(pl.UTF-8):	%{modname} - dowiązania biblioteki libstatgrab
+Name:		%{php_name}-pecl-%{modname}
 Version:	0.6.0
 Release:	3
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	5e8e659e28d95da57c3d5a694cfb5af4
 URL:		http://pecl.php.net/package/statgrab/
 BuildRequires:	libstatgrab-devel >= 0.10
-BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.344
+BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Requires:	php-common >= 4:5.0.4
-Obsoletes:	php-pear-%{_modname}
+Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +27,7 @@ systems.
 This extension allows you to call the functions made available by
 libstatgrab library.
 
-In PECL status of this package is: %{_status}.
+In PECL status of this package is: %{status}.
 
 %description -l pl.UTF-8
 libstatgrab to biblioteka dostarczająca wspólny interfejs do
@@ -37,13 +37,13 @@ uniksowych.
 To rozszerzenie pozwala wywoływać funkcje udostępniane przez
 bibliotekę libstatgrab.
 
-To rozszerzenie ma w PECL status: %{_status}.
+To rozszerzenie ma w PECL status: %{status}.
 
 %prep
-%setup -q -c
+%setup -qc
+mv Statgrab-%{version}/* .
 
 %build
-cd %{_smodname}-%{version}
 phpize
 %configure
 %{__make}
@@ -52,10 +52,10 @@ phpize
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 
-install %{_smodname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
 EOF
 
 %clean
@@ -71,6 +71,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{_smodname}-%{version}/CREDITS
-%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%doc CREDITS
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
