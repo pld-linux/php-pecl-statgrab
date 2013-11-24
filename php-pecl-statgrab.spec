@@ -5,17 +5,18 @@ Summary:	%{modname} - libstatgrab bindings
 Summary(pl.UTF-8):	%{modname} - dowiązania biblioteki libstatgrab
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.6.0
-Release:	3
+Release:	4
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	5e8e659e28d95da57c3d5a694cfb5af4
 URL:		http://pecl.php.net/package/statgrab/
-BuildRequires:	libstatgrab-devel >= 0.10
 BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	libstatgrab-devel >= 0.10
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
+Requires:	php(core) >= 5.0.4
+Provides:	php(%{modname}) = %{version}
 Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
